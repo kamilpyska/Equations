@@ -18,21 +18,51 @@ public class Equations {
         Random r = new Random();
 
         int[] randomNumbers=new int[]{r.nextInt(20)+1,r.nextInt(10)+1,r.nextInt(10)+1};
-        int result;
+        int result=0;
         
         int firstN=randomNumbers[r.nextInt(3)];
         int secondN=randomNumbers[r.nextInt(3)];
         int thirdN=randomNumbers[r.nextInt(3)];
         
-        
+        //String[] operators = new String[]{"+","-","*","/"};
+
         System.out.println(firstN+" "+secondN+" "+thirdN+" = ");
+        
         System.out.println("Pierwszy znak w działaniu:");
-        Scanner sc1=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
+        
+                
+        switch(sc.nextInt()){
+            case 0:
+                result+=firstN+secondN;
+                break;
+            case 1:
+                result-=firstN-secondN;
+                break;
+            case 2:
+                result*=firstN*secondN;
+                break;
+            case 3:
+                result/=firstN/secondN;
+                break;
+        }
         
         System.out.println("Drugi znak w działaniu:");
-        Scanner sc2=new Scanner(System.in);
         
-        
+        switch(sc.nextInt()){
+            case 0:
+                result += thirdN;
+                break;
+            case 1:
+                result -= thirdN;
+                break;
+            case 2:
+                result *= thirdN;
+                break;
+            case 3:
+                result /= thirdN;
+                break;
+        }
         
         
         
