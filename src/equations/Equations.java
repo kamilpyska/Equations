@@ -28,40 +28,59 @@ public class Equations {
 
         System.out.println(firstN+" "+secondN+" "+thirdN+" = ");
         
-        System.out.println("Pierwszy znak w działaniu:");
+        System.out.println("Podaj jakie znaki należy umieść w działaniu, aby było prawdziwe(np. '++' lub '*+':");
         Scanner sc=new Scanner(System.in);
         
-                
-        switch(sc.nextInt()){
-            case 0:
-                result+=firstN+secondN;
-                break;
-            case 1:
-                result-=firstN-secondN;
-                break;
-            case 2:
-                result*=firstN*secondN;
-                break;
-            case 3:
-                result/=firstN/secondN;
-                break;
-        }
         
-        System.out.println("Drugi znak w działaniu:");
-        
-        switch(sc.nextInt()){
-            case 0:
-                result += thirdN;
+        switch(sc.next()){
+            case "'++'":
+                result=firstN+secondN+thirdN;
                 break;
-            case 1:
-                result -= thirdN;
+            case "'+-'":
+                result=firstN+secondN-thirdN;
                 break;
-            case 2:
-                result *= thirdN;
+            case "'+*'":
+                result=firstN+secondN*thirdN;
                 break;
-            case 3:
-                result /= thirdN;
+            case "'+/'":
+                result=firstN+secondN/thirdN;
                 break;
+            case "'-+'":
+                result=firstN-secondN+thirdN;
+                break;
+            case "'--'":
+                result=firstN-secondN-thirdN;
+                break;
+            case "'-*'":
+                result=firstN-secondN*thirdN;
+                break;    
+            case "'-/'":
+                result=firstN-secondN/thirdN;
+                break;    
+            case "'*+'":
+                result=firstN*secondN+thirdN;
+                break;
+            case "'*-'":
+                result=firstN*secondN-thirdN;
+                break;
+            case "'**'":
+                result=firstN*secondN*thirdN;
+                break;
+            case "'*/'":
+                result=firstN*secondN/thirdN;
+                break;
+            case "'/+'":
+                result=firstN/secondN+thirdN;
+                break;
+            case "'/-'":
+                result=firstN/secondN-thirdN;
+                break;
+            case "'/*'":
+                result=firstN/secondN*thirdN;
+                break;
+            case "'//'":
+                result=firstN/secondN/thirdN;
+                break;  
         }
         
         
