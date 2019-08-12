@@ -17,18 +17,18 @@ public class Equations {
     public static void main(String[] args) {
         Random r = new Random();
 
-        int[] randomNumbers=new int[]{r.nextInt(20)+1,r.nextInt(10)+1,r.nextInt(10)+1};
+        
         int result=0;
         
-        int firstN=randomNumbers[r.nextInt(3)];
-        int secondN=randomNumbers[r.nextInt(3)];
-        int thirdN=randomNumbers[r.nextInt(3)];
+        int firstN=r.nextInt(15)+1;
+        int secondN=r.nextInt(15)+1;
+        int thirdN=r.nextInt(15)+1;
         
         //String[] operators = new String[]{"+","-","*","/"};
 
-        System.out.println(firstN+" "+secondN+" "+thirdN+" = ");
         
-        System.out.println("Podaj jakie znaki należy umieść w działaniu, aby było prawdziwe(np. '++' lub '*+':");
+        System.out.println("Podaj jakie znaki należy umieść w działaniu, aby było prawdziwe(np. '++' lub '*+'");
+        System.out.println(firstN+" "+secondN+" "+thirdN+" =  ?");
         Scanner sc=new Scanner(System.in);
         
         
@@ -83,7 +83,7 @@ public class Equations {
                 break;  
         }
         
-        
+        System.out.println("Wynik: "+result);
         
         
     }
